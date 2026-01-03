@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Photo Gallery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: #f4f4f4;
+    }
+
+    .navbar {
+      background: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    .sidebar {
+      width: 200px;
+      background: #444;
+      color: white;
+      padding: 20px;
+      min-height: calc(100vh - 100px);
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    .footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    ul li a:hover {
+        color: red;
+    }
+    a {
+        color: #ee5454;
+    }
+    .gallery {
+        background: black;
+    }
+    .main-content {
+        background: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">Photo Gallery</div>
+  <div class="container">
+    <div class="sidebar">Sidebar 
+        links 
+        <ul>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.youtube.com/@codeorg/playlists">Youtube</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+            <li><a href="https://github.com/">Github</a></li>
+            <li><a href="https://www.linkedin.com/feed/">LinkedIn</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+      <div class="gallery">
+        <img src="https://t3.ftcdn.net/jpg/09/38/20/44/360_F_938204480_5BZPwZ4dL5iujr2XZwzkxdFeQJoRDsRE.jpg" alt="Photo 1">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/039/189/950/small/ai-generated-spring-landscape-panorama-with-flowers-in-a-meadow-photo.jpeg" alt="Photo 2">
+        <img src="https://wallpapers.com/images/hd/spring-meadow-1268-x-800-wallpaper-xn5meb3v25ol43a6.jpg" alt="Photo 3">
+        <img src="https://images.pexels.com/photos/4514213/pexels-photo-4514213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Photo 4">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/030/659/163/small_2x/minimalistic-desktop-background-high-quality-free-photo.jpg" alt="Photo 5">
+        <img src="https://png.pngtree.com/background/20230904/original/pngtree-sky-lawn-plain-scenery-photo-picture-image_4958037.jpg" alt="Photo 6">
+      </div>
+    </div>
+  </div>
+  <div class="footer">&copy; 2026 Photo Gallery</div>
+</body>
+
+</html>
