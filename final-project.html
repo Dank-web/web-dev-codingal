@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Travel Guide</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+header {
+  background: #0d6efd;
+  color: white;
+  padding: 15px 30px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+/* HERO SECTION */
+.aboutMe {
+  height: 320px;
+  background-image: url("https://i.ytimg.com/vi/joiyb6c_Ry4/maxresdefault.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: rgb(3, 136, 54);
+  text-align: center;
+  padding: 90px 20px;
+  position: relative;
+}
+
+.aboutMe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.aboutMe h2,
+.aboutMe p {
+  position: relative;
+  z-index: 1;
+}
+
+.aboutMe h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* DESTINATIONS */
+.destinations {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+.card p {
+  padding: 0 10px 15px;
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Programing Journey</h1>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">About Me</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Journey</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="aboutMe">
+    <h2>Hi, I am Ayaan</h2>
+    <p>and I am passinate about learning new programing topics and tring new prgraming fields</p>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section class="destinations">
+    <h2>My Skills</h2>
+
+    <div class="cards">
+      <div class="card">
+        <img src="https://e7.pngegg.com/pngimages/410/100/png-clipart-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-thumbnail.png" alt="Paris">
+        <h3>HTML</h3>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="Tokyo">
+        <h3>CSS</h3>
+      </div>
+
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/960px-Unofficial_JavaScript_logo_2.svg.png" alt="New York">
+        <h3>JavaScript</h3>
+      </div>
+    </div>
+
+     <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png" alt="New York">
+        <h3>BootStrap</h3>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Travel Guide. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.addEventListener("load", function () {
+      alert("🌍 Welcome to Travel Guide! Ready to explore?");
+    });
+
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        navLinks.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+      card.addEventListener("click", function () {
+        const destination = this.querySelector("h3").textContent;
+        alert("✈️ You selected " + destination + "! Pack your bags!");
+      });
+    });
+  </script>
+
+</body>
+</html>
